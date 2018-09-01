@@ -8,8 +8,8 @@ using namespace std;
 #define debug(v) cerr << #v << v << endl;
 
 vector<int> sum_autos;
-vector<pair<int, int>> mejor_lado;
 map<pair<int, int>, int> memo;
+vector<vector<int>> memo2;
 int long_ferry;
 
 int max_autos(int k1, int i){
@@ -20,20 +20,32 @@ int max_autos(int k1, int i){
 
 	int long_auto = sum_autos[i] - sum_autos[i-1];
 
-	if (memo.find(make_pair(k1, i)) == memo.end()){
-		if (long_auto + k1 <= long_ferry and long_auto + k2 <= long_ferry){
-			memo[make_pair(k1, i)] = max(max_autos(k1, i+1), max_autos(k1 + long_auto, i+1));
-		} else if (long_auto + k1 > long_ferry and long_auto + k2 <= long_ferry){
-			memo[make_pair(k1, i)] = max_autos(k1, i+1);
-		} else if (long_auto + k1 <= long_ferry and long_auto + k2 > long_ferry){
-			memo[make_pair(k1, i)] = max_autos(k1 + long_auto, i+1);
-		} else {
-			memo[make_pair(k1, i)] = i-1;
-		}
+	// if (memo.find(make_pair(k1, i)) == memo.end()){
+	// 	if (long_auto + k1 <= long_ferry and long_auto + k2 <= long_ferry){
+	// 		memo[make_pair(k1, i)] = max(max_autos(k1, i+1), max_autos(k1 + long_auto, i+1));
+	// 	} else if (long_auto + k1 > long_ferry and long_auto + k2 <= long_ferry){
+	// 		memo[make_pair(k1, i)] = max_autos(k1, i+1);
+	// 	} else if (long_auto + k1 <= long_ferry and long_auto + k2 > long_ferry){
+	// 		memo[make_pair(k1, i)] = max_autos(k1 + long_auto, i+1);
+	// 	} else {
+	// 		memo[make_pair(k1, i)] = i-1;
+	// 	}
 
+	// }
+
+	if (memo2[k1][i] == -1){
+		if (long_auto + k1 <= long_ferry and long_auto + k2 <= long_ferry){
+			memo2[k1][i] = max(max_autos(k1, i+1), max_autos(k1 + long_auto, i+1));
+		} else if (long_auto + k1 > long_ferry and long_auto + k2 <= long_ferry){
+			memo2[k1][i] = max_autos(k1, i+1);
+		} else if (long_auto + k1 <= long_ferry and long_auto + k2 > long_ferry){
+			memo2[k1][i] = max_autos(k1 + long_auto, i+1);
+		} else {
+			memo2[k1][i] = i-1;
+		}
 	}
 
-	return memo[make_pair(k1, i)];
+	return memo2[k1][i];
 	
 }
 
@@ -82,8 +94,8 @@ int main() {
 			sum_autos.push_back(long_auto + *(--sum_autos.end()));
 			cin >> long_auto;
 		}
+		memo2= vector<vector<int>> (long_ferry+10, vector<int> (sum_autos.size(), -1));
 
-		mejor_lado = vector<pair<int, int>> (sum_autos.size() - 1, make_pair(0, 0));
 
 		int ans;
 
