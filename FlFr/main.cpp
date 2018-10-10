@@ -3,7 +3,7 @@
 using namespace std;
 
 vector<vector<long long>> memo; // memo[i][j] precio de llegar a j, con i vuelos
-vector<vector<pair<int, long long>>> ady;
+vector<unordered_map<int, long long>> ady;
 
 const long long INF = 1e17;
 
@@ -55,7 +55,10 @@ int main(){
 			long long w;
 			cin >> a >> b >> w;
 			int aa = m[a], bb = m[b];
-			ady[bb].push_back({aa, w});
+			auto it = ady[bb].find(aa);
+			if (it == ady[bb].end()) ady[bb][aa] = INF;
+			ady[bb][aa] = min(ady[bb][aa], w);
+			// ady[bb].push_back({aa, w});
 
 		}
 

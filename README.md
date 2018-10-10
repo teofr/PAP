@@ -17,4 +17,7 @@ Ejercicios de PAP
     - Entrega 1/10
 * UVA 11280 - Flying to Fredericton:
     - Entrega 8/10
+    - https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2255
     - Entregado: tarde (9/10)  
+* [UVA 11228](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2169) - [UVA 11503](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2498):
+    - Entre 17/10
