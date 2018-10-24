@@ -23,3 +23,9 @@ Ejercicios de PAP
 * [UVA 11228](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2169) - __[UVA 11503](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2498)__:
     - Entrega 17/10
     - Entregado 13/10
+* [UVA 12668](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=4406)
+    - Entregado 22/10
+    - Nota: B
+* [UVA 11402](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2397)
+    - Entrega: 31/10
+    - ALTO RANKING
