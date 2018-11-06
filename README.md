@@ -10,6 +10,7 @@ Ejercicios de PAP
     - Nota: B
 * UVA 758 - the same game:
     - Entrega ...
+    - Nota: B
 * UVA 315 - __UVA 610__ - UVA 796 - UVA 10199 - UVA 10765:
     - Entrega 24/9
     - Nota B
@@ -29,3 +30,6 @@ Ejercicios de PAP
 * [UVA 11402](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2397)
     - Entrega: 31/10
     - ALTO RANKING
+    - Ver que poronga pasa con el de seg tree lazy
+* [UVA 1676](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=24&problem=4551&mosmsg=Submission+received+with+ID+22261356)
+    - Entrega: 7/11
